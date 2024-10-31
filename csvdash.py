@@ -6,9 +6,9 @@ import io
 import time
 from flask import Flask
 
-server = Flask(__name__)
+server = Flask()
 
-app = dash.Dash(__name__)
+app = dash.Dash()
 server = app.server
 
 app.layout = html.Div([
