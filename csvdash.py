@@ -26,7 +26,7 @@ app.layout = html.Div([
     dcc.Input(id="sensor-count", type="number", value=5, placeholder="Number of temp sensors"),
     
     # Input for output file path and name
-    html.Div("Enter Output File Path and Name (e.g., C:/Users/.../Processed_Data.xlsx):"),
+    html.Div("Enter Output File Path and Name (e.g., C:/Users/.../Processed_Datas.xlsx):"),
     dcc.Input(id="output-filepath", type="text", placeholder="Output file path", style={"width": "100%"}),
     
     html.Button("Process and Save", id="process-button", n_clicks=0),
@@ -84,3 +84,4 @@ def update_output(n_clicks, contents, sensor_count, output_filepath):
 
 if __name__ == "__main__":
     app.run_server(debug=True)
+#1s
