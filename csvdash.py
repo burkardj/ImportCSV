@@ -6,10 +6,8 @@ import io
 import time
 from flask import Flask
 
-server = Flask()
-
-app = dash.Dash()
-server = app.server
+server = Flask(__name__)  # Corrected initialization
+app = dash.Dash(__name__, server=server)
 
 app.layout = html.Div([
     html.H1("CSV Import and Configuration"),
