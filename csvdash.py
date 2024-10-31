@@ -5,6 +5,8 @@ import base64
 import io
 import time
 from flask import Flask
+from openpyxl import load_workbook
+from datetime import datetime, timedelta
 
 server = Flask(__name__)  # Corrected initialization
 app = dash.Dash(__name__, server=server)
@@ -24,7 +26,7 @@ app.layout = html.Div([
     dcc.Input(id="sensor-count", type="number", value=5, placeholder="Number of temp sensors"),
     
     # Input for output file path and name
-    html.Div("Enter Output File Path and Name (e.g., C:/path_to_folder/Processed_Data.xlsx):"),
+    html.Div("Enter Output File Path and Name (e.g., C:/Users/.../Processed_Data.xlsx):"),
     dcc.Input(id="output-filepath", type="text", placeholder="Output file path", style={"width": "100%"}),
     
     html.Button("Process and Save", id="process-button", n_clicks=0),
