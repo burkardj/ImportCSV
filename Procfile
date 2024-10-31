@@ -1,1 +1,1 @@
-web: gunicorn unified csvdash:server --log-file -
+web: gunicorn csvdash:server --log-file -
