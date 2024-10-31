@@ -4,8 +4,12 @@ import pandas as pd
 import base64
 import io
 import time
+from flask import Flask
+
+server = Flask(__name__)
 
 app = dash.Dash(__name__)
+server = app.server
 
 app.layout = html.Div([
     html.H1("CSV Import and Configuration"),
